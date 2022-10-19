@@ -1,3 +1,5 @@
+// Types
+
 const typeVariable1: string = "Some text"
 const typeVariable2: number = 42
 const typeVariable3: boolean = true
@@ -24,3 +26,44 @@ const time1: Date = new Date()
 
 // TS может неявно преобразовать данные. Можно обойтись без записи типа данных для переменной
 const time2 = new Date()
+
+// =================================================================
+
+
+// Functions
+
+function sumFunc(arg1: number, arg2: number): number {
+    return arg1 + arg2
+}
+
+const repeatName = (name: string, countRepeat: number): string => {
+    return name.repeat(countRepeat)
+}
+
+
+// Void - пустота
+
+const justFunc = () => { }
+const voidFunc = (): void => { }
+
+console.log(justFunc() == undefined, voidFunc() == undefined)
+
+
+// Unknown - используется для проверки на существование
+let unknownVariable: unknown
+unknownVariable = 10
+console.log(unknownVariable == undefined)
+
+
+// object - дать непримитивный тип данных переменной, не путать с Object
+
+// Примитивные типы
+// string
+// number
+// boolean
+// symbol
+// null
+
+const isObj1 = 1
+const isObj2 = [1]
+console.log("Typeof variable, isObj", typeof isObj1 == "object", typeof isObj2 == "object")

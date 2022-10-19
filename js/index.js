@@ -1,4 +1,5 @@
 "use strict";
+// Types
 const typeVariable1 = "Some text";
 const typeVariable2 = 42;
 const typeVariable3 = true;
@@ -17,3 +18,29 @@ const variabel3 = true;
 const time1 = new Date();
 // TS может неявно преобразовать данные. Можно обойтись без записи типа данных для переменной
 const time2 = new Date();
+// =================================================================
+// Functions
+function sumFunc(arg1, arg2) {
+    return arg1 + arg2;
+}
+const repeatName = (name, countRepeat) => {
+    return name.repeat(countRepeat);
+};
+// Void - пустота
+const justFunc = () => { };
+const voidFunc = () => { };
+console.log(justFunc() == undefined, voidFunc() == undefined);
+// Unknown - используется для проверки на существование
+let unknownVariable;
+unknownVariable = 10;
+console.log(unknownVariable == undefined);
+// object - дать непримитивный тип данных переменной, не путать с Object
+// Примитивные типы
+// string
+// number
+// boolean
+// symbol
+// null
+const isObj1 = 1;
+const isObj2 = [1];
+console.log("Typeof variable, isObj", typeof isObj1 == "object", typeof isObj2 == "object");
