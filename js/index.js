@@ -58,3 +58,72 @@ const input2 = document.getElementById("fname");
 console.log(input1.value, input2.value);
 // Мы преобразовали данные из одного типа в другой
 // =================================================================
+// Structure
+const someArray = ["q", "w"]; // Синтаксический сахар для записи ниже
+const someArray2 = ["w", "q"]; // Дженерик
+// Кортеж, массив с фиксированной длиной
+const cortegeArray = ["q", 1];
+// enum
+// Удобная индексация свойств
+var CONSTANTS1;
+(function (CONSTANTS1) {
+    CONSTANTS1[CONSTANTS1["key1"] = 0] = "key1";
+    CONSTANTS1[CONSTANTS1["key2"] = 1] = "key2";
+    CONSTANTS1[CONSTANTS1["key3"] = 2] = "key3";
+})(CONSTANTS1 || (CONSTANTS1 = {}));
+// У enum можно переназначать индексы
+var CONSTANTS2;
+(function (CONSTANTS2) {
+    CONSTANTS2[CONSTANTS2["key1"] = 5] = "key1";
+    CONSTANTS2[CONSTANTS2["key2"] = 6] = "key2";
+    CONSTANTS2[CONSTANTS2["key3"] = 7] = "key3";
+})(CONSTANTS2 || (CONSTANTS2 = {}));
+var CONSTANTS3;
+(function (CONSTANTS3) {
+    CONSTANTS3["key1"] = "k1";
+    CONSTANTS3["key2"] = "k2";
+    CONSTANTS3["key3"] = "k3";
+})(CONSTANTS3 || (CONSTANTS3 = {}));
+var CONSTANTS4;
+(function (CONSTANTS4) {
+    CONSTANTS4[CONSTANTS4["key1"] = 6] = "key1";
+    CONSTANTS4[CONSTANTS4["key2"] = 7] = "key2";
+    CONSTANTS4[CONSTANTS4["key3"] = 8] = "key3";
+})(CONSTANTS4 || (CONSTANTS4 = {}));
+const someVar = 123;
+const somePeople1 = {
+    name: "Username1",
+    surname: "UserSurname1",
+    age: 100,
+    isMarried: false,
+    isWorking: true
+};
+const somePeople2 = {
+    name: "Username2",
+    surname: "UserSurname2",
+    age: 100,
+    isMarried: false,
+    isWorking: true,
+    hasDog: true
+};
+const stringKeys = {
+    "Key1": "Some text",
+    // "Key2": 123
+};
+const objectMerge = {
+    key1: 1,
+    key2: 2,
+    key3: 3
+};
+const objExt1 = {
+    key1: 1,
+    key2: 2
+};
+const objExt2 = {
+    key1: 1,
+    key2: 2,
+    key3: 3,
+    text: "Some text"
+};
+// Советуют использовать type для примитивов, а интерфейсы для объектов
+// =================================================================
