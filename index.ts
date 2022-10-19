@@ -67,3 +67,28 @@ console.log(unknownVariable == undefined)
 const isObj1 = 1
 const isObj2 = [1]
 console.log("Typeof variable, isObj", typeof isObj1 == "object", typeof isObj2 == "object")
+
+// =================================================================
+
+// Преобразование типов
+// К примеру нам требуется получить данные с инпута
+const input = document.getElementById("fname")
+// console.log(input.value) 
+// Будет ошибка, так как getElementById возвращает HTMLElement, у которого нет свойства value
+
+// Здесь потребуется поменять тип переменной
+// 1.
+const input1 = <HTMLInputElement>document.getElementById("fname")
+
+// 2.
+const input2 = document.getElementById("fname") as HTMLInputElement
+
+console.log(input1.value, input2.value)
+
+// Мы преобразовали данные из одного типа в другой
+
+// =================================================================
+
+
+
+
